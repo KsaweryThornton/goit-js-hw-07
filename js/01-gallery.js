@@ -25,13 +25,13 @@ const galleryElem = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", galleryElem);
 
-gallery.onclick = (e) => {
-  e.preventDefault();
-  if (e.target.nodeName !== "IMG") {
+gallery.onclick = (event) => {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
     return;
   } else {
     const instance = basicLightbox.create(`
-		<img width="1400" height="900" src="${e.target.dataset.source}">
+		<img width="1400" height="900" src="${event.target.dataset.source}">
 	`);
     instance.show();
   }

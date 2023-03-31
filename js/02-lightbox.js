@@ -22,9 +22,9 @@ const galleryElem = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", galleryElem);
 
-gallery.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target.nodeName !== "IMG") {
+gallery.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
     return;
   } else {
     let lightbox = new SimpleLightbox(".gallery a", {
