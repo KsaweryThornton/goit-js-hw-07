@@ -25,7 +25,7 @@ const galleryElem = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", galleryElem);
 
-gallery.onclick = (event) => {
+gallery.addEventListener("click", (event) => {
   event.preventDefault();
   if (event.target.nodeName !== "IMG") {
     return;
@@ -35,4 +35,4 @@ gallery.onclick = (event) => {
 	`);
     instance.show();
   }
-};
+});
